@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캘린더</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+        .left{
+            flex: 2;
+        }
+        .todo {
+            flex: 1;
+        }
+        .calendar-box {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+            border: 2px solid #0e007b;
+        }
+        .calendar-box th, .calendar-box td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+        .calendar-box td {
+            height: 80px;
+            vertical-align: top;
+            text-align: left;
+        }
+        .tab {
+            border-radius: 5px 5px 0 0;
+            padding: 10px 25px;
+            font-size: 15px;
+            margin: 0;
+            border: 2px solid #0e007b;
+            border-right: none;
+            background-color: #f5f5f5;
+        }
+        .tabs{
+            display: flex;
+            gap: 0;
+        }
+        .tab:last-child {
+            border-right: 2px solid #0e007b;
+        }
+        .todo ul {
+            list-style: none;
+            padding: 0;
+        }
+        .todo li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee ;
+        }
+        .todo input[type='checkbox'] {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="container">
+    <header>
+        <h1>5월</h1>
+    </header>
+    <main>
+        <section class="left">
+            <nav class="tabs">
+                <button class="tab active">monthly</button>
+                <button class="tab">weekly</button>
+                <button class="tab">today</button>
+            </nav>
+            <div>
+                <table class="calendar-box">
+                    <thead>
+                        <tr>
+                            <th>일</th>
+                            <th>월</th>
+                            <th>화</th>
+                            <th>수</th>
+                            <th>목</th>
+                            <th>금</th>
+                            <th>토</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="todo">
+            <h2>To do List</h2>
+            <div class="todo-input-box">
+                <input type="text" placeholder="할 일을 입력하세요">
+                <button>추가</button>
+            </div>
+            <ul>
+                <li>
+                    <input type="checkbox">
+                    <span> 9:00-17:30 알바</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span> 18:00-19:00 레슨</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
